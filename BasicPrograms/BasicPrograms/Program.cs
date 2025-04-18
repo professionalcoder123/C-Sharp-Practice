@@ -34,6 +34,19 @@
             NumbersDisplay.PrintNumbers();
 
             EvenNumbers.DisplayEvenNumbers();
+
+            SumOfNumbers.PrintSum();
+
+            int factorial = Factorial.FindFactorial();
+            Console.WriteLine("Factorial of a number is " + factorial);
+
+            SumOfRange.CalculateSumOfRange();
+
+            NumberOfDigits.PrintNumberOfDigits();
+
+            Calculator.Calculate();
+
+            Numbers1To100.PrintStatementsThroughNumbers();
         }
     }
 }
