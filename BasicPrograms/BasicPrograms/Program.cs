@@ -20,8 +20,11 @@
 
             VotingEligibility.CheckEligibility();
 
-            string result = CharacterCheck.CheckCharacter();
-            Console.WriteLine("Entered character is " + result);
+            string character = CharacterCheck.CheckCharacter();
+            Console.WriteLine("Entered character is " + character);
+
+            bool isDivisible = NumberDivisibility.CheckDivisibility();
+            Console.WriteLine(isDivisible);
         }
     }
 }
