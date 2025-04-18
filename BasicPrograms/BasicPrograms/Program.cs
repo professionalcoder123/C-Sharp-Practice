@@ -19,6 +19,9 @@
             Console.WriteLine(number);
 
             VotingEligibility.CheckEligibility();
+
+            string result = CharacterCheck.CheckCharacter();
+            Console.WriteLine("Entered character is " + result);
         }
     }
 }
