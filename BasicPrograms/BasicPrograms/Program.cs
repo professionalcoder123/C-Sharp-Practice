@@ -32,6 +32,8 @@
             Console.WriteLine(letter);
 
             NumbersDisplay.PrintNumbers();
+
+            EvenNumbers.DisplayEvenNumbers();
         }
     }
 }
