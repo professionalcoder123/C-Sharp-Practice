@@ -10,6 +10,8 @@
 
             string result = EvenOddChecker.CheckEvenOrOdd();
             Console.WriteLine(result);
+
+            MaximumNumber.FindMaximum();
         }
     }
 }

@@ -14,19 +14,25 @@ namespace BasicPrograms
             int num1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter second number");
             int num2 = int.Parse(Console.ReadLine());
-            if (num1 == num2)
+            Console.WriteLine("Enter third number");
+            int num3 = int.Parse(Console.ReadLine());
+            if ((num1 == num2)&&(num2==num3)&&(num1==num3))
             {
-                Console.WriteLine("Two numbers are equal. Cannot find greater number!");
+                Console.WriteLine("All the three numbers are equal. Cannot find greater number!");
             }
             else
             {
-                if (num1 > num2)
+                if ((num1 > num2) && (num1 > num3))
                 {
                     Console.WriteLine("First number is greater");
                 }
-                else
+                else if ((num2 > num1) && (num2 > num3))
                 {
                     Console.WriteLine("Second number is greater");
+                }
+                else
+                {
+                    Console.WriteLine("Third number is greater");
                 }
             }
         }
