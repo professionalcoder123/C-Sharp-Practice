@@ -12,6 +12,8 @@
             Console.WriteLine(result);
 
             MaximumNumber.FindMaximum();
+
+            GradeSystem.GetGrade();
         }
     }
 }
