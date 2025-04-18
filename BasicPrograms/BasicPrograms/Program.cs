@@ -4,32 +4,34 @@
     {
         static void Main(string[] args)
         {
-            NumberAddition.AddNumbers();
+            //NumberAddition.AddNumbers();
 
-            NumberSubtraction.SubtractNumbers();
+            //NumberSubtraction.SubtractNumbers();
 
-            string result = EvenOddChecker.CheckEvenOrOdd();
-            Console.WriteLine(result);
+            //string result = EvenOddChecker.CheckEvenOrOdd();
+            //Console.WriteLine(result);
 
-            MaximumNumber.FindMaximum();
+            //MaximumNumber.FindMaximum();
 
-            GradeSystem.GetGrade();
+            //GradeSystem.GetGrade();
 
-            string number = NumberIdentification.CheckNumber();
-            Console.WriteLine(number);
+            //string number = NumberIdentification.CheckNumber();
+            //Console.WriteLine(number);
 
-            VotingEligibility.CheckEligibility();
+            //VotingEligibility.CheckEligibility();
 
-            string character = CharacterCheck.CheckCharacter();
-            Console.WriteLine("Entered character is " + character);
+            //string character = CharacterCheck.CheckCharacter();
+            //Console.WriteLine("Entered character is " + character);
 
-            bool isDivisible = NumberDivisibility.CheckDivisibility();
-            Console.WriteLine(isDivisible);
+            //bool isDivisible = NumberDivisibility.CheckDivisibility();
+            //Console.WriteLine(isDivisible);
 
-            LeapYear.CheckLeapYear();
+            //LeapYear.CheckLeapYear();
 
-            string letter = LetterIdentification.CheckLetter();
-            Console.WriteLine(letter);
+            //string letter = LetterIdentification.CheckLetter();
+            //Console.WriteLine(letter);
+
+            NumbersDisplay.PrintNumbers();
         }
     }
 }
