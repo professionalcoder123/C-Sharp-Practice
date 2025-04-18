@@ -14,6 +14,9 @@
             MaximumNumber.FindMaximum();
 
             GradeSystem.GetGrade();
+
+            string number = NumberIdentification.CheckNumber();
+            Console.WriteLine(number);
         }
     }
 }
