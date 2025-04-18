@@ -14,8 +14,10 @@ namespace BasicPrograms
             int num1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter second number");
             int num2 = int.Parse(Console.ReadLine());
-            int num3 = num1 + num2;
-            Console.WriteLine("Addition of numbers is " + num3);
+            Console.WriteLine("Enter third number");
+            int num3 = int.Parse(Console.ReadLine());
+            int num4 = num1 + num2 + num3;
+            Console.WriteLine("Addition of numbers is " + num4);
         }
     }
 }
