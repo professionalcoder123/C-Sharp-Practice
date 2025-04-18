@@ -7,6 +7,9 @@
             NumberAddition.AddNumbers();
 
             NumberSubtraction.SubtractNumbers();
+
+            string result = EvenOddChecker.CheckEvenOrOdd();
+            Console.WriteLine(result);
         }
     }
 }
