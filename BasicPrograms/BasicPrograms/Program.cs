@@ -25,6 +25,8 @@
 
             bool isDivisible = NumberDivisibility.CheckDivisibility();
             Console.WriteLine(isDivisible);
+
+            LeapYear.CheckLeapYear();
         }
     }
 }
