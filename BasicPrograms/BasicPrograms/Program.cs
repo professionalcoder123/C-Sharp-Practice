@@ -50,6 +50,19 @@
 
             bool palindrome = StringPalindrome.IsPalindrome();
             Console.WriteLine(palindrome);
+
+            VowelsAndConsonants.CountVowelsAndConsonants();
+
+            string reverse = StringReverse.ReverseString();
+            Console.WriteLine("Reverse of a string is " + "\'" + reverse + "\'");
+
+            Anagram.CheckAnagram();
+
+            WordCount.CountWords();
+
+            DuplicateCharacters.RemoveDuplicates();
+
+            CharacterFrequency.FindFrequency();
         }
     }
 }
