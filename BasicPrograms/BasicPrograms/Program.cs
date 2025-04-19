@@ -63,6 +63,13 @@
             DuplicateCharacters.RemoveDuplicates();
 
             CharacterFrequency.FindFrequency();
+
+            string toggledStr = CaseToggling.ToggleCase();
+            Console.WriteLine("Same string after toggling the case of characters : " + toggledStr);
+
+            LongestWord.FindLongestWord();
+
+            NumberString.CheckDigitsInString();
         }
     }
 }
