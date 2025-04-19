@@ -47,6 +47,9 @@
             Calculator.Calculate();
 
             Numbers1To100.PrintStatementsThroughNumbers();
+
+            bool palindrome = StringPalindrome.IsPalindrome();
+            Console.WriteLine(palindrome);
         }
     }
 }
