@@ -14,7 +14,6 @@ namespace BasicPrograms
             Console.WriteLine("Enter a string");
             string str = Console.ReadLine();
             str = str.ToLower();
-            string result = "";
             Dictionary<char, int> dict = new Dictionary<char, int>();
             Console.Write("Resultant string without duplicates : ");
             foreach(char ch in str)
@@ -22,10 +21,16 @@ namespace BasicPrograms
                 if (!dict.ContainsKey(ch))
                 {
                     dict[ch] = 1;
-                    result = result + ch;
+                }
+                else
+                {
+                    dict[ch]++;
                 }
             }
-            Console.WriteLine(result);
+            foreach(var pair in dict)
+            {
+                Console.Write(pair.Key);
+            }
         }
     }
 }
