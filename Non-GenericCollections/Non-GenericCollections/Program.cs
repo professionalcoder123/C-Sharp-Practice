@@ -4,9 +4,15 @@
     {
         static void Main(string[] args)
         {
-            //StringsDisplay.DisplayStrings();
+            StringsDisplay.DisplayStrings();
 
             StackOperations.PerformOperations();
+
+            QueueOperations.PerformOperations();
+
+            HashtableOperations.SearchByName();
+
+            SortedListOperations.SortByRollNumber();
         }
     }
 }
