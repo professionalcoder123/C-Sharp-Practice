@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            StringsDisplay.DisplayStrings();
+            //StringsDisplay.DisplayStrings();
+
+            StackOperations.PerformOperations();
         }
     }
 }
