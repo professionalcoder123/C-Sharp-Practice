@@ -27,7 +27,7 @@ namespace ADO.NET
 
         public void OpenConnection()
         {
-            string connectionString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=db2;Integrated Security=True;Trust Server Certificate=True";
+            string connectionString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=db2;Integrated Security=True";
             connection = new SqlConnection(connectionString);
             connection.Open();
             Console.WriteLine("Connection established successfully!");
@@ -76,14 +76,23 @@ namespace ADO.NET
             string selectQuery = "SELECT * FROM UserData";
             SqlCommand selectCommand = new SqlCommand(selectQuery, connection);
             SqlDataReader reader = selectCommand.ExecuteReader();
-            while (reader.Read())
+
+            if (reader.HasRows)
             {
-                Console.WriteLine("Id : " + reader.GetValue(0).ToString());
-                Console.WriteLine("Name : " + reader.GetValue(1).ToString());
-                Console.WriteLine("Email : " + reader.GetValue(2).ToString());
-                Console.WriteLine("Age : "+reader.GetValue(3).ToString());
-                Console.WriteLine("-----------------------------------------");
+                while (reader.Read())
+                {
+                    Console.WriteLine("Id : " + reader.GetValue(3).ToString());
+                    Console.WriteLine("Name : " + reader.GetValue(0).ToString());
+                    Console.WriteLine("Email : " + reader.GetValue(1).ToString());
+                    Console.WriteLine("Age : " + reader.GetValue(2).ToString());
+                    Console.WriteLine("-----------------------------------------");
+                }
             }
+            else
+            {
+                Console.WriteLine("No data found!");
+            }
+
             reader.Close();
         }
 
@@ -267,28 +276,19 @@ namespace ADO.NET
         {
             Console.WriteLine("Enter a user ID to delete");
             int id = int.Parse(Console.ReadLine());
-            var user = new User();
-            var context = new ValidationContext(user)
+
+            string deleteQuery = "DELETE FROM UserData WHERE id=@id";
+            SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection);
+            deleteCommand.Parameters.AddWithValue("@id", id);
+            int rowsAffected = deleteCommand.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
             {
-                MemberName = id.ToString()
-            };
-            var results = new List<ValidationResult>();
-            bool isValid = Validator.TryValidateProperty(id, context, results);
-            if (isValid)
-            {
-                string deleteQuery = "DELETE FROM UserData WHERE id=@id";
-                SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection);
-                deleteCommand.Parameters.AddWithValue("@id", id);
-                deleteCommand.ExecuteNonQuery();
                 Console.WriteLine("User deleted successfully!");
             }
             else
             {
-                Console.WriteLine("Validation errors :");
-                foreach (var error in results)
-                {
-                    Console.WriteLine($" -> {error.ErrorMessage}");
-                }
+                Console.WriteLine("User ID not found!");
             }
         }
 
