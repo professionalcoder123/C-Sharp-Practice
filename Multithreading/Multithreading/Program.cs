@@ -6,6 +6,12 @@ namespace Multithreading
     {
         static void Main(string[] args)
         {
+            //There are different ways to pass a function to a thread start.
+            //ThreadStart obj = new ThreadStart(Test);
+            //ThreadStart obj = Test;
+            //ThreadStart obj = delegate () { Test(); };
+            //ThreadStart obj = () => Test();
+            //OR simply we can write like this as well.
             //Thread t1 = new Thread(ThreadsDemo.Func1);
             //Thread t2 = new Thread(ThreadsDemo.Func2);
             //Thread t3 = new Thread(ThreadsDemo.Func3);
@@ -47,6 +53,30 @@ namespace Multithreading
             //t1.Start();
             //Thread t2 = new Thread(DeadlockDemo.Thread2);
             //t2.Start();
+
+            //ThreadPool.QueueUserWorkItem(ThreadPoolDemo.WorkItem1, "Hello!");
+            //ThreadPool.QueueUserWorkItem(ThreadPoolDemo.WorkItem2, 5);
+            //Thread.Sleep(1000);
+            //Console.WriteLine("Main thread exits!");
+
+            //Stopwatch s1 = new Stopwatch();
+            //Stopwatch s2 = new Stopwatch();
+            //Thread t1 = new Thread(ThreadPerformanceDemo.IncrementCounter1);
+            //Thread t2 = new Thread(ThreadPerformanceDemo.IncrementCounter2);
+            //Console.WriteLine("Single Threaded Model :");
+            //s1.Start();
+            //ThreadPerformanceDemo.IncrementCounter1();
+            //ThreadPerformanceDemo.IncrementCounter2();
+            //s1.Stop();
+            //Console.WriteLine("Multi-Threaded Model :");
+            //s2.Start();
+            //t1.Start();
+            //t2.Start();
+            //s2.Stop();
+            //t1.Join();
+            //t2.Join();
+            //Console.WriteLine("Time taken in single-threaded model : " + s1.ElapsedMilliseconds);
+            //Console.WriteLine("Time taken in multi-threaded model : " + s2.ElapsedMilliseconds);
         }
     }
 }
