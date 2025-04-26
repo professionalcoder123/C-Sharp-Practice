@@ -1,0 +1,20 @@
+[
+  {
+    "Roll": 1,
+    "Name": "Aditya",
+    "Age": 10,
+    "Percentage": 93.72
+  },
+  {
+    "Roll": 2,
+    "Name": "Sohel",
+    "Age": 14,
+    "Percentage": 80.66
+  },
+  {
+    "Roll": 3,
+    "Name": "Kedar",
+    "Age": 9,
+    "Percentage": 85.87
+  }
+]
